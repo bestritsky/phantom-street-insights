@@ -90,7 +90,7 @@
 /* Custom chart styles */
 .recharts-cartesian-grid-horizontal line,
 .recharts-cartesian-grid-vertical line {
-  @apply stroke-gray-700 stroke-opacity-50;
+  @apply stroke-gray-700 opacity-50;
 }
 
 .recharts-text {
