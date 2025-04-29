@@ -117,18 +117,18 @@ const ServicesSection: React.FC = () => {
       ]
     },
     {
-      title: "Supply Chain Risk Analysis",
-      tagline: "Identify vulnerabilities, prevent disruptions, and optimize sourcing strategies to maintain competitive pricing advantage.",
+      title: "Geopolitical Risk Analysis",
+      tagline: "Navigate global political uncertainties that impact markets, regulations, and supply chains to protect your international business interests.",
       description: "",
-      icon: Truck,
-      iconColor: "text-[#F97316]",
-      borderColor: "bg-[#F97316]",
-      bulletColor: "text-[#F97316]",
+      icon: Globe,
+      iconColor: "text-[#33C3F0]",
+      borderColor: "bg-[#33C3F0]",
+      bulletColor: "text-[#33C3F0]",
       deliverables: [
-        "Supply chain disruption forecast",
-        "Pricing fluctuation defense matrix",
-        "Strategic sourcing analysis",
-        "Competitive risk mitigation plan"
+        "Regional risk assessment matrix",
+        "Supply chain vulnerability report",
+        "Regulatory impact forecast",
+        "Market entry risk profile"
       ]
     },
     {
