@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-black/80 z-0"></div>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
-          Critical‑Thinking AI Strategy for a Changing World
+          Critical‑Thinking AI Strategy for an Uncertain World
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8">
           Transform tariff turmoil, supply‑chain fractures, and geopolitical shifts into growth 
