@@ -7,7 +7,8 @@ import {
   Users, 
   LineChart,
   Shield, 
-  BarChart3
+  BarChart3,
+  Globe
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
@@ -80,6 +81,20 @@ const ServicesSection: React.FC = () => {
         "Scenario models",
         "Pros/cons cheat-sheet",
         "Board-ready memo"
+      ]
+    },
+    {
+      title: "Financial Modeling",
+      tagline: "Build forward-looking models that anticipate market shifts and identify untapped opportunities.",
+      description: "",
+      icon: Globe,
+      iconColor: "text-[#D946EF]",
+      borderColor: "bg-[#D946EF]",
+      bulletColor: "text-[#D946EF]",
+      deliverables: [
+        "5-year projection toolkit",
+        "Sensitivity analysis matrix",
+        "Executive decision dashboard"
       ]
     }
   ];

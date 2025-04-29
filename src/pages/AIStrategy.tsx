@@ -5,7 +5,6 @@ import HeroSection from '@/components/ai-strategy/HeroSection';
 import ServicesSection from '@/components/ai-strategy/ServicesSection';
 import ExecutiveEnablementSection from '@/components/ai-strategy/ExecutiveEnablementSection';
 import PortfolioPositioningSection from '@/components/ai-strategy/PortfolioPositioningSection';
-import CostAutomationSection from '@/components/ai-strategy/CostAutomationSection';
 import EngagementSection from '@/components/ai-strategy/EngagementSection';
 import Footer from '@/components/ai-strategy/Footer';
 
@@ -18,7 +17,6 @@ const AIStrategy: React.FC = () => {
         <ServicesSection />
         <ExecutiveEnablementSection />
         <PortfolioPositioningSection />
-        <CostAutomationSection />
         <EngagementSection />
       </main>
       <Footer />
