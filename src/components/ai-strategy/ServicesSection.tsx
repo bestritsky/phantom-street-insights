@@ -10,7 +10,9 @@ import {
   BarChart3,
   Globe,
   DollarSign,
-  Briefcase
+  Briefcase,
+  Calendar,
+  Book
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
@@ -114,17 +116,17 @@ const ServicesSection: React.FC = () => {
       ]
     },
     {
-      title: "Executive AI Coaching",
-      tagline: "Empower executives to understand and leverage the latest AI technologies in their business strategies.",
+      title: "Executive Upskilling & Prompt Gym",
+      tagline: "Stay Sharp—30 Minutes a Week. Bite-sized coaching sessions keep you fluent in the latest AI tools, frameworks, and compliance moves—so you outpace disruption without burning hours.",
       description: "",
       icon: Briefcase,
       iconColor: "text-[#9b87f5]",
       borderColor: "bg-[#9b87f5]",
       bulletColor: "text-[#9b87f5]",
       deliverables: [
-        "60-minute weekly AI literacy sessions",
-        "Custom AI implementation roadmap",
-        "Emerging technology briefings"
+        "Weekly 30-minute AI fluency sessions",
+        "Strategic AI Direction Templates",
+        "Practical AI implementation playbooks"
       ]
     }
   ];
