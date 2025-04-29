@@ -16,6 +16,7 @@ const Dashboards = () => {
       description: 'Market trends, stock movements, and competitor analysis',
       icon: <BarChart3 className="h-8 w-8 text-finance-accent-blue" />,
       color: 'from-finance-accent-blue/20 to-transparent',
+      buttonClass: 'hover:bg-finance-accent-blue hover:text-white hover:border-finance-accent-blue hover:shadow-md hover:shadow-finance-accent-blue/50',
       onClick: () => navigate('/dashboards/market'),
     },
     {
@@ -24,6 +25,7 @@ const Dashboards = () => {
       description: 'Risk scores, sentiment analysis, and threat detection',
       icon: <ShieldAlert className="h-8 w-8 text-finance-accent-purple" />,
       color: 'from-finance-accent-purple/20 to-transparent',
+      buttonClass: 'hover:bg-finance-accent-purple hover:text-white hover:border-finance-accent-purple hover:shadow-md hover:shadow-finance-accent-purple/50',
       onClick: () => navigate('/dashboards/risks'),
     },
     {
@@ -32,6 +34,7 @@ const Dashboards = () => {
       description: 'Product performance, cost analysis, and supply chain monitoring',
       icon: <Package className="h-8 w-8 text-finance-accent-orange" />,
       color: 'from-finance-accent-orange/20 to-transparent',
+      buttonClass: 'hover:bg-finance-accent-orange hover:text-white hover:border-finance-accent-orange hover:shadow-md hover:shadow-finance-accent-orange/50',
       onClick: () => navigate('/products'),
     }
   ];
@@ -64,7 +67,7 @@ const Dashboards = () => {
               <CardFooter className="border-t border-border/40 p-4">
                 <Button 
                   variant="outline" 
-                  className="w-full hover:bg-finance-dark-gray/50"
+                  className={`w-full transition-all duration-300 ${dashboard.buttonClass}`}
                   onClick={dashboard.onClick}
                 >
                   View Dashboard
