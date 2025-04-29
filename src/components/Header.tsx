@@ -32,7 +32,7 @@ const Header: React.FC = () => {
               <Link 
                 to="/ai-strategy" 
                 className={`text-sm font-medium transition-colors ${
-                  location.pathname === '/ai-strategy' 
+                  location.pathname === '/ai-strategy' || location.pathname === '/' 
                     ? 'text-finance-accent-blue' 
                     : 'text-gray-300 hover:text-finance-accent-blue'
                 }`}
