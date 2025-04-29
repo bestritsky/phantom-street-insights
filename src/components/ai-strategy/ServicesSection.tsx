@@ -12,7 +12,8 @@ import {
   DollarSign,
   Briefcase,
   Calendar,
-  Book
+  Book,
+  Truck
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
@@ -113,6 +114,21 @@ const ServicesSection: React.FC = () => {
         "Expense reduction roadmap",
         "Automation opportunity matrix",
         "90-day cost-cutting plan"
+      ]
+    },
+    {
+      title: "Supply Chain Risk Analysis",
+      tagline: "Identify vulnerabilities, prevent disruptions, and optimize sourcing strategies to maintain competitive pricing advantage.",
+      description: "",
+      icon: Truck,
+      iconColor: "text-[#F97316]",
+      borderColor: "bg-[#F97316]",
+      bulletColor: "text-[#F97316]",
+      deliverables: [
+        "Supply chain disruption forecast",
+        "Pricing fluctuation defense matrix",
+        "Strategic sourcing analysis",
+        "Competitive risk mitigation plan"
       ]
     },
     {
