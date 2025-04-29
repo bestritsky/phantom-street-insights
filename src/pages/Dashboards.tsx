@@ -26,7 +26,7 @@ const Dashboards = () => {
       icon: <ShieldAlert className="h-8 w-8 text-finance-accent-purple" />,
       color: 'from-finance-accent-purple/20 to-transparent',
       onClick: () => navigate('/dashboards/risks'),
-      thumbnail: '/lovable-uploads/7f2998a9-164b-4ac9-81a8-29bee7c4a47d.png'
+      thumbnail: '/lovable-uploads/0dce73ae-b630-4044-b8fe-f4cd3411a83b.png'
     },
     {
       id: 'products',
