@@ -16,7 +16,8 @@ const Dashboards = () => {
       description: 'Market trends, stock movements, and competitor analysis',
       icon: <BarChart3 className="h-8 w-8 text-finance-accent-blue" />,
       color: 'from-finance-accent-blue/20 to-transparent',
-      onClick: () => navigate('/dashboards/market')
+      onClick: () => navigate('/dashboards/market'),
+      thumbnail: null
     },
     {
       id: 'risks',
@@ -24,7 +25,8 @@ const Dashboards = () => {
       description: 'Risk scores, sentiment analysis, and threat detection',
       icon: <ShieldAlert className="h-8 w-8 text-finance-accent-purple" />,
       color: 'from-finance-accent-purple/20 to-transparent',
-      onClick: () => navigate('/dashboards/risks')
+      onClick: () => navigate('/dashboards/risks'),
+      thumbnail: '/lovable-uploads/7f2998a9-164b-4ac9-81a8-29bee7c4a47d.png'
     },
     {
       id: 'products',
@@ -32,7 +34,8 @@ const Dashboards = () => {
       description: 'Product performance, cost analysis, and supply chain monitoring',
       icon: <Package className="h-8 w-8 text-finance-accent-orange" />,
       color: 'from-finance-accent-orange/20 to-transparent',
-      onClick: () => navigate('/products')
+      onClick: () => navigate('/products'),
+      thumbnail: null
     }
   ];
 
@@ -60,6 +63,28 @@ const Dashboards = () => {
                 </div>
                 {dashboard.icon}
               </div>
+              
+              {dashboard.thumbnail && (
+                <div className="px-6 pb-4">
+                  <div className="rounded-md overflow-hidden border border-gray-800">
+                    <img 
+                      src={dashboard.thumbnail} 
+                      alt={`${dashboard.title} Preview`}
+                      className="w-full h-auto object-cover"
+                      style={{ maxHeight: "180px" }}
+                    />
+                  </div>
+                </div>
+              )}
+              
+              {!dashboard.thumbnail && (
+                <div className="px-6 pb-4">
+                  <div className="rounded-md overflow-hidden border border-gray-800 bg-gray-900/50 flex items-center justify-center" style={{ height: "120px" }}>
+                    <p className="text-sm text-gray-500">Dashboard preview</p>
+                  </div>
+                </div>
+              )}
+              
               <CardFooter className="border-t border-border/40 p-4">
                 <Button 
                   variant="outline" 
