@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative chart-container overflow-hidden p-8 md:p-12 mb-8">
+    <section className="relative chart-container overflow-hidden p-8 md:p-12 mb-8 bg-[#1a1f2c]">
       <div 
         className="absolute inset-0 z-0" 
         style={{
