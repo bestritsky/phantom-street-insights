@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
           Critical‑Thinking AI Strategy for an Uncertain World
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8">
-          Shift turmoil into growth with pragmatic AI playbooks grounded in rigorous thinking, research, and automations at a fraction of Gartner, Forrester, and KPMG prices.
+          Shift Risk into Resilience with pragmatic AI playbooks grounded in rigorous thinking, research, and automations at a fraction of Gartner, Forrester, and KPMG prices.
         </p>
         <Button className="bg-finance-accent-blue hover:bg-finance-accent-blue/80 text-white font-semibold py-6 px-8 text-lg">
           Book a Risk & Resilience Call
