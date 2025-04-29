@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import AIStrategy from "./pages/AIStrategy";
 import Dashboards from "./pages/Dashboards";
+import MarketDashboard from "./components/MarketDashboard";
+import ReputationDashboard from "./components/ReputationDashboard";
 import Products from "./pages/Products";
 import NotFound from "./pages/NotFound";
 
@@ -21,6 +23,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/dashboards" element={<Dashboards />} />
+          <Route path="/dashboards/market" element={<MarketDashboard />} />
+          <Route path="/dashboards/risks" element={<ReputationDashboard />} />
           <Route path="/ai-strategy" element={<AIStrategy />} />
           <Route path="/products" element={<Products />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

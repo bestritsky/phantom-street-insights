@@ -1,29 +1,77 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import MarketDashboard from '@/components/MarketDashboard';
-import ReputationDashboard from '@/components/ReputationDashboard';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { BarChart3, ShieldAlert, Package } from 'lucide-react';
 
 const Dashboards = () => {
+  const navigate = useNavigate();
+  
+  const dashboards = [
+    {
+      id: 'market',
+      title: 'Market Dashboard',
+      description: 'Market trends, stock movements, and competitor analysis',
+      icon: <BarChart3 className="h-8 w-8 text-finance-accent-blue" />,
+      color: 'from-finance-accent-blue/20 to-transparent',
+      onClick: () => navigate('/dashboards/market')
+    },
+    {
+      id: 'risks',
+      title: 'Risks Dashboard',
+      description: 'Risk scores, sentiment analysis, and threat detection',
+      icon: <ShieldAlert className="h-8 w-8 text-finance-accent-purple" />,
+      color: 'from-finance-accent-purple/20 to-transparent',
+      onClick: () => navigate('/dashboards/risks')
+    },
+    {
+      id: 'products',
+      title: 'Products Dashboard',
+      description: 'Product performance, cost analysis, and supply chain monitoring',
+      icon: <Package className="h-8 w-8 text-finance-accent-orange" />,
+      color: 'from-finance-accent-orange/20 to-transparent',
+      onClick: () => navigate('/products')
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-finance-dark-blue flex flex-col">
       <Header />
-      <main className="container mx-auto px-4 py-6 flex-grow">
-        <h1 className="text-2xl font-bold mb-6">Dashboards</h1>
+      <main className="container mx-auto px-4 py-10 flex-grow">
+        <h1 className="text-3xl font-bold mb-8">Dashboards</h1>
+        <p className="text-finance-muted-text mb-8 max-w-2xl">
+          Select a dashboard to view detailed analytics and insights tailored to your business needs.
+          Each dashboard provides specialized data visualization and monitoring tools.
+        </p>
         
-        <Tabs defaultValue="market" className="w-full">
-          <TabsList className="grid grid-cols-2 mb-6 max-w-md">
-            <TabsTrigger value="market">Market Dashboard</TabsTrigger>
-            <TabsTrigger value="reputation">Risk & Reputation</TabsTrigger>
-          </TabsList>
-          <TabsContent value="market" className="mt-0">
-            <MarketDashboard />
-          </TabsContent>
-          <TabsContent value="reputation" className="mt-0">
-            <ReputationDashboard />
-          </TabsContent>
-        </Tabs>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {dashboards.map((dashboard) => (
+            <Card 
+              key={dashboard.id}
+              className="hover-glow overflow-hidden transition-all duration-300 hover:translate-y-[-5px] bg-card/80 backdrop-blur-sm"
+            >
+              <div className={`h-2 w-full bg-gradient-to-r ${dashboard.color}`}></div>
+              <div className="p-6 flex justify-between items-start">
+                <div>
+                  <h2 className="text-xl font-semibold mb-2">{dashboard.title}</h2>
+                  <p className="text-sm text-muted-foreground">{dashboard.description}</p>
+                </div>
+                {dashboard.icon}
+              </div>
+              <CardFooter className="border-t border-border/40 p-4">
+                <Button 
+                  variant="outline" 
+                  className="w-full hover:bg-finance-dark-gray/50"
+                  onClick={dashboard.onClick}
+                >
+                  View Dashboard
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
       </main>
       
       <footer className="py-6 px-4 border-t border-gray-800 mt-auto">
