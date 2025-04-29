@@ -13,7 +13,8 @@ import {
   Briefcase,
   Calendar,
   Book,
-  Truck
+  Truck,
+  MessageSquare
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
@@ -143,6 +144,25 @@ const ServicesSection: React.FC = () => {
         "Weekly 30-minute AI fluency sessions",
         "Strategic AI Direction Templates",
         "Practical AI implementation playbooks"
+      ]
+    },
+    {
+      title: "Conversational Lifelike Avatars",
+      tagline: "Humanize your digital presence with AI-powered avatars, enhanced by custom knowledge base integration, that engage customers, build trust, and deliver personalized experiences 24/7.",
+      description: "",
+      icon: MessageSquare,
+      iconColor: "text-[#9b87f5]",
+      borderColor: "bg-[#9b87f5]",
+      bulletColor: "text-[#9b87f5]",
+      deliverables: [
+        "Custom avatar design & voice matching",
+        "Conversation flow architecture",
+        "Emotional intelligence training",
+        "Knowledge base integration for personalized responses",
+        "Automation workflow blueprint",
+        "Email system integration",
+        "CRM data synchronization",
+        "Internal process optimization"
       ]
     }
   ];
