@@ -115,16 +115,16 @@ const ServicesSection: React.FC = () => {
     },
     {
       title: "Executive AI Coaching",
-      tagline: "AI-powered leadership guidance to accelerate decision-making and strategic thinking.",
+      tagline: "Empower executives to understand and leverage the latest AI technologies in their business strategies.",
       description: "",
       icon: Briefcase,
       iconColor: "text-[#9b87f5]",
       borderColor: "bg-[#9b87f5]",
       bulletColor: "text-[#9b87f5]",
       deliverables: [
-        "60-minute weekly sessions",
-        "Personalized growth roadmap",
-        "AI-driven performance insights"
+        "60-minute weekly AI literacy sessions",
+        "Custom AI implementation roadmap",
+        "Emerging technology briefings"
       ]
     }
   ];
