@@ -114,17 +114,17 @@ const ServicesSection: React.FC = () => {
       ]
     },
     {
-      title: "Executive Coaching",
-      tagline: "Empower leaders to drive strategic growth and achieve peak performance.",
+      title: "Executive AI Coaching",
+      tagline: "AI-powered leadership guidance to accelerate decision-making and strategic thinking.",
       description: "",
       icon: Briefcase,
       iconColor: "text-[#9b87f5]",
       borderColor: "bg-[#9b87f5]",
       bulletColor: "text-[#9b87f5]",
       deliverables: [
-        "Leadership development plan",
-        "Performance enhancement strategies",
-        "Strategic decision-making framework"
+        "60-minute weekly sessions",
+        "Personalized growth roadmap",
+        "AI-driven performance insights"
       ]
     }
   ];
