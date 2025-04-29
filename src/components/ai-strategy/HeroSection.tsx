@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
         </Button>
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
           From C‑suite workshops to real‑time trade‑flow dashboards, we fuse AI with disciplined 
-          critical‑thinking frameworks—so you stay ahead when borders close, costs spike, or partners pivot.
+          critical‑thinking frameworks with research—so you stay ahead when borders close, costs spike, or partners pivot.
         </p>
         
         <div className="mt-12 p-6 bg-black/30 backdrop-blur-sm rounded-lg border border-white/10">
