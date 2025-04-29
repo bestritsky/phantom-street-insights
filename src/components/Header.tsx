@@ -2,7 +2,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
-import StockSearch from './StockSearch';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -24,10 +23,6 @@ const Header: React.FC = () => {
               Binary<span className="text-finance-accent-blue">Advisers</span>
             </h1>
           </Link>
-        </div>
-        
-        <div className="hidden md:flex flex-1 max-w-md mx-6">
-          <StockSearch />
         </div>
         
         <nav>
