@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
-import { AlertTriangle, Clock, Package, Truck } from 'lucide-react';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip, BarChart, Bar, Legend } from 'recharts';
+import { AlertTriangle, Clock, Package, Truck, ChartBarStacked } from 'lucide-react';
 
 // Mock data for delay trends
 const delayTrendData = [
@@ -17,6 +16,16 @@ const delayTrendData = [
   { month: 'Jun', shipping: 8, customs: 5, production: 3 },
   { month: 'Jul', shipping: 10, customs: 6, production: 4 },
   { month: 'Aug', shipping: 9, customs: 5, production: 4 },
+];
+
+// Mock data for shipment volume by region
+const shipmentVolumeData = [
+  { region: 'North America', ontime: 85, delayed: 15 },
+  { region: 'Europe', ontime: 75, delayed: 25 },
+  { region: 'Asia', ontime: 60, delayed: 40 },
+  { region: 'South America', ontime: 72, delayed: 28 },
+  { region: 'Africa', ontime: 65, delayed: 35 },
+  { region: 'Australia', ontime: 90, delayed: 10 },
 ];
 
 // Mock data for current disruptions
@@ -118,76 +127,117 @@ const SupplyChainMonitor: React.FC = () => {
         </Card>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Supply Chain Delay Trends</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="h-80">
-            <ChartContainer
-              config={{
-                shipping: { label: "Shipping Delays" },
-                customs: { label: "Customs Processing" },
-                production: { label: "Production Delays" },
-              }}
-              className="h-full"
-            >
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart
-                  data={delayTrendData}
-                  margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
-                >
-                  <defs>
-                    <linearGradient id="colorShipping" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#EF4444" stopOpacity={0.8} />
-                      <stop offset="95%" stopColor="#EF4444" stopOpacity={0.1} />
-                    </linearGradient>
-                    <linearGradient id="colorCustoms" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#EAB308" stopOpacity={0.8} />
-                      <stop offset="95%" stopColor="#EAB308" stopOpacity={0.1} />
-                    </linearGradient>
-                    <linearGradient id="colorProduction" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#3B82F6" stopOpacity={0.8} />
-                      <stop offset="95%" stopColor="#3B82F6" stopOpacity={0.1} />
-                    </linearGradient>
-                  </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#444" />
-                  <XAxis dataKey="month" stroke="#888" />
-                  <YAxis stroke="#888" unit=" days" />
-                  <ChartTooltip
-                    content={<ChartTooltipContent />}
-                    cursor={{ fill: 'rgba(255, 255, 255, 0.05)' }}
-                  />
-                  <Area
-                    type="monotone"
-                    dataKey="shipping"
-                    name="Shipping Delays"
-                    stroke="#EF4444"
-                    fillOpacity={1}
-                    fill="url(#colorShipping)"
-                  />
-                  <Area
-                    type="monotone"
-                    dataKey="customs"
-                    name="Customs Processing"
-                    stroke="#EAB308"
-                    fillOpacity={1}
-                    fill="url(#colorCustoms)"
-                  />
-                  <Area
-                    type="monotone"
-                    dataKey="production"
-                    name="Production Delays"
-                    stroke="#3B82F6"
-                    fillOpacity={1}
-                    fill="url(#colorProduction)"
-                  />
-                </AreaChart>
-              </ResponsiveContainer>
-            </ChartContainer>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Supply Chain Delay Trends</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="h-80">
+              <ChartContainer
+                config={{
+                  shipping: { label: "Shipping Delays" },
+                  customs: { label: "Customs Processing" },
+                  production: { label: "Production Delays" },
+                }}
+                className="h-full"
+              >
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart
+                    data={delayTrendData}
+                    margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
+                  >
+                    <defs>
+                      <linearGradient id="colorShipping" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#EF4444" stopOpacity={0.8} />
+                        <stop offset="95%" stopColor="#EF4444" stopOpacity={0.1} />
+                      </linearGradient>
+                      <linearGradient id="colorCustoms" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#EAB308" stopOpacity={0.8} />
+                        <stop offset="95%" stopColor="#EAB308" stopOpacity={0.1} />
+                      </linearGradient>
+                      <linearGradient id="colorProduction" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#3B82F6" stopOpacity={0.8} />
+                        <stop offset="95%" stopColor="#3B82F6" stopOpacity={0.1} />
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#444" />
+                    <XAxis dataKey="month" stroke="#888" />
+                    <YAxis stroke="#888" unit=" days" />
+                    <ChartTooltip
+                      content={<ChartTooltipContent />}
+                      cursor={{ fill: 'rgba(255, 255, 255, 0.05)' }}
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="shipping"
+                      name="Shipping Delays"
+                      stroke="#EF4444"
+                      fillOpacity={1}
+                      fill="url(#colorShipping)"
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="customs"
+                      name="Customs Processing"
+                      stroke="#EAB308"
+                      fillOpacity={1}
+                      fill="url(#colorCustoms)"
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="production"
+                      name="Production Delays"
+                      stroke="#3B82F6"
+                      fillOpacity={1}
+                      fill="url(#colorProduction)"
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <ChartBarStacked className="mr-2 h-5 w-5 text-finance-accent-blue" />
+              <span>Shipment Status by Region</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="h-80">
+              <ChartContainer
+                config={{
+                  ontime: { label: "On Time Deliveries" },
+                  delayed: { label: "Delayed Shipments" },
+                }}
+                className="h-full"
+              >
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                    data={shipmentVolumeData}
+                    margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
+                    layout="vertical"
+                  >
+                    <CartesianGrid strokeDasharray="3 3" stroke="#444" />
+                    <XAxis type="number" stroke="#888" unit="%" />
+                    <YAxis dataKey="region" type="category" stroke="#888" width={100} />
+                    <ChartTooltip
+                      content={<ChartTooltipContent />}
+                      cursor={{ fill: 'rgba(255, 255, 255, 0.05)' }}
+                    />
+                    <Legend />
+                    <Bar dataKey="ontime" name="On Time" stackId="a" fill="#10B981" />
+                    <Bar dataKey="delayed" name="Delayed" stackId="a" fill="#EF4444" />
+                  </BarChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
 
       <Card>
         <CardHeader>
