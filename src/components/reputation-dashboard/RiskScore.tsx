@@ -11,8 +11,8 @@ import {
 
 const RiskScore: React.FC = () => {
   return (
-    <Card className="hover-glow col-span-1">
-      <CardHeader>
+    <Card className="hover-glow col-span-1 overflow-hidden border-t-2 border-t-finance-chart-red">
+      <CardHeader className="pb-2">
         <CardTitle className="flex items-center justify-between">
           <span>Overall Risk Score</span>
           <ShieldAlert className="h-5 w-5 text-finance-accent-blue" />
@@ -20,11 +20,11 @@ const RiskScore: React.FC = () => {
       </CardHeader>
       <CardContent>
         <div className="flex flex-col items-center">
-          <div className="relative h-36 w-36">
+          <div className="relative h-40 w-40 drop-shadow-lg">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div>
-                <p className="text-4xl font-bold text-finance-chart-red">71</p>
-                <p className="text-muted-foreground text-center text-sm">Risk Level</p>
+              <div className="text-center">
+                <p className="text-5xl font-bold text-finance-chart-red drop-shadow-md">71</p>
+                <p className="text-muted-foreground text-sm font-medium">Risk Level</p>
               </div>
             </div>
             <ResponsiveContainer width="100%" height="100%">
@@ -42,28 +42,28 @@ const RiskScore: React.FC = () => {
                   endAngle={-270}
                   dataKey="value"
                 >
-                  <Cell fill="#ef4444" />
+                  <Cell fill="#ef4444" className="drop-shadow-md" />
                   <Cell fill="#1e293b" />
                 </Pie>
               </PieChart>
             </ResponsiveContainer>
           </div>
-          <div className="flex items-center mt-4">
+          <div className="flex items-center mt-4 bg-red-900/20 px-4 py-2 rounded-full">
             <TrendingUp className="h-5 w-5 text-finance-chart-red mr-2" />
             <span className="text-finance-chart-red font-medium">+5 points risk increase</span>
           </div>
-          <div className="grid grid-cols-3 w-full mt-6 gap-2">
-            <div className="flex flex-col items-center p-2 bg-secondary/30 rounded-md">
-              <span className="text-sm text-muted-foreground">Market</span>
-              <span className="font-medium text-finance-chart-red">76%</span>
+          <div className="grid grid-cols-3 w-full mt-6 gap-3">
+            <div className="flex flex-col items-center p-3 bg-secondary/30 rounded-lg border border-gray-800/30 hover:border-finance-accent-blue/30 transition-all">
+              <span className="text-xs text-muted-foreground mb-1">Market</span>
+              <span className="font-medium text-finance-chart-red text-lg">76%</span>
             </div>
-            <div className="flex flex-col items-center p-2 bg-secondary/30 rounded-md">
-              <span className="text-sm text-muted-foreground">Operations</span>
-              <span className="font-medium text-yellow-500">65%</span>
+            <div className="flex flex-col items-center p-3 bg-secondary/30 rounded-lg border border-gray-800/30 hover:border-finance-accent-blue/30 transition-all">
+              <span className="text-xs text-muted-foreground mb-1">Operations</span>
+              <span className="font-medium text-yellow-500 text-lg">65%</span>
             </div>
-            <div className="flex flex-col items-center p-2 bg-secondary/30 rounded-md">
-              <span className="text-sm text-muted-foreground">Regulatory</span>
-              <span className="font-medium text-finance-chart-green">42%</span>
+            <div className="flex flex-col items-center p-3 bg-secondary/30 rounded-lg border border-gray-800/30 hover:border-finance-accent-blue/30 transition-all">
+              <span className="text-xs text-muted-foreground mb-1">Regulatory</span>
+              <span className="font-medium text-finance-chart-green text-lg">42%</span>
             </div>
           </div>
         </div>
