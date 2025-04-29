@@ -1,10 +1,9 @@
 
 import React from 'react';
-import Header from '@/components/Header';
-import { Navigate } from 'react-router-dom';
+import AIStrategy from './AIStrategy';
 
 const Index = () => {
-  return <Navigate to="/ai-strategy" replace />;
+  return <AIStrategy />;
 };
 
 export default Index;
