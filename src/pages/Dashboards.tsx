@@ -50,7 +50,7 @@ const Dashboards = () => {
           {dashboards.map((dashboard) => (
             <Card 
               key={dashboard.id}
-              className="hover-glow overflow-hidden transition-all duration-300 hover:translate-y-[-5px] bg-card/80 backdrop-blur-sm"
+              className="hover-glow overflow-hidden transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-primary/20 bg-card/80 backdrop-blur-sm border-opacity-70 hover:border-primary/50"
             >
               <div className={`h-2 w-full bg-gradient-to-r ${dashboard.color}`}></div>
               <div className="p-6 flex justify-between items-start">
@@ -60,12 +60,6 @@ const Dashboards = () => {
                 </div>
                 {dashboard.icon}
               </div>
-              
-              <CardContent className="px-6 pb-0">
-                <div className="p-4 flex items-center justify-center border-t border-gray-800/30">
-                  <p className="text-sm text-gray-400">View this dashboard for detailed insights</p>
-                </div>
-              </CardContent>
               
               <CardFooter className="border-t border-border/40 p-4">
                 <Button 
