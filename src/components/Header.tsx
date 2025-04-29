@@ -15,7 +15,7 @@ const Header: React.FC = () => {
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 flex items-center justify-center">
               <img 
-                src="https://binaryadvisers.com/wp-content/uploads/2023/12/cropped-ba_logo-removebg-preview.png" 
+                src="https://binaryadvisers.com/wp-content/uploads/2025/04/ChatGPT_Image_Apr_29__2025__12_37_56_AM-removebg-preview.png" 
                 alt="BinaryAdvisers Logo" 
                 className="w-full h-full object-contain"
               />
