@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { BarChart3, ShieldAlert, Package } from 'lucide-react';
 
 // Import the image directly
-import riskDashboardImage from '../images/risk-dashboard.png';
+import riskDashboardImage from '@/images/risk-dashboard.png';
 
 const Dashboards = () => {
   const navigate = useNavigate();
