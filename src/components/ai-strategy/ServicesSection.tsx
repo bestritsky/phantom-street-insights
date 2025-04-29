@@ -3,106 +3,92 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import ServiceCard from './ServiceCard';
 import { 
-  Brain, 
-  BarChart3, 
+  FileText, 
+  Users, 
   LineChart,
-  Globe, 
-  PieChart
+  Shield, 
+  BarChart3
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      title: "AI Leadership & Change‑Management Advisory",
-      tagline: "Lead the AI Revolution—No Tech Degree Required.",
-      description: "Equip non-technical C‑suite and senior leaders with the mindset, playbooks, and coaching to inspire confident AI adoption across the organization.",
-      icon: Brain,
+      title: "Business-Plan Assessment",
+      tagline: "Stress-test your roadmap and surface silent landmines before investors do.",
+      description: "",
+      icon: FileText,
       iconColor: "text-finance-accent-blue",
       borderColor: "bg-finance-accent-blue",
       bulletColor: "text-finance-accent-blue",
       deliverables: [
-        "Executive workshops that translate AI into board‑level outcomes",
-        "Psychological‑safety frameworks so teams feel free to experiment",
-        "1:1 leadership coaching focused on critical‑thinking & decision cadence"
+        "20-point viability score",
+        "Risk heat-map",
+        "90-day fix list"
       ]
     },
     {
-      title: "End‑to‑End AI Transformation Roadmaps",
-      tagline: "From Idea to Impact in 90 Days.",
-      description: "We map vision to validated use‑cases, quantify ROI, and stand up a governance model that keeps every initiative on time and on budget—even when global conditions shift overnight.",
-      icon: BarChart3,
+      title: "Competitive Analysis",
+      tagline: "See where rivals outspend, underserve, and how you can overtake them.",
+      description: "",
+      icon: Users,
       iconColor: "text-finance-accent-purple",
       borderColor: "bg-finance-accent-purple",
       bulletColor: "text-finance-accent-purple",
       deliverables: [
-        "Use‑case portfolio & capability gap analysis",
-        "Governance & KPI dashboard build‑out",
-        "90‑day implementation sprint plan"
+        "Rival SWOT deck",
+        "Feature-gap matrix",
+        "Attack-plan storyboard"
       ]
     },
     {
-      title: "AI‑Driven Market & Competitive Insight",
-      tagline: "Spot Risks & Opportunities Before Rivals Do.",
-      description: "We distill oceans of market noise into decisive actions—revealing pricing shifts, patent conflicts, and emerging threats—so you can act first and grow faster.",
+      title: "Marketing-Plan Audit",
+      tagline: "Tighten campaigns, slash waste, and speak to buyers who actually convert.",
+      description: "",
       icon: LineChart,
       iconColor: "text-finance-accent-orange",
       borderColor: "bg-finance-accent-orange",
       bulletColor: "text-finance-accent-orange",
       deliverables: [
-        "Competitor deep‑dives & opportunity sizing",
-        "Real‑time news/patent/tariff alerting & dashboards",
-        "Decision‑ready briefing decks"
+        "Funnel leak report",
+        "Persona refresh",
+        "60-day refocus plan"
       ]
     },
     {
-      title: "Geopolitical & Supply‑Chain Risk Analytics",
-      tagline: "Navigate Tariffs, Decoupling & Disruption—Today.",
-      description: "Scenario models fuse AI forecasting with live trade‑flow intelligence so you can dodge tariff shocks, ally decoupling, and sudden supply‑chain fractures—before they hit.",
-      icon: Globe,
+      title: "Patent Analysis",
+      tagline: "Validate, strengthen, or pivot your IP before costly filings.",
+      description: "",
+      icon: Shield,
       iconColor: "text-finance-chart-green",
       borderColor: "bg-finance-chart-green",
       bulletColor: "text-finance-chart-green",
       deliverables: [
-        "Forward‑earnings stress tests",
-        "Tariff & trade‑war impact simulators",
-        "Geopolitical trigger‑metric dashboards"
+        "Claims overlap map",
+        "Patentability opinion",
+        "Licensing roadmap"
       ]
     },
     {
-      title: "Operational Cost‑Takeout & CapEx Optimization",
-      tagline: "Unlock 25–40% Savings with Smart Automation.",
-      description: "Identify the high‑impact process bottlenecks, then deploy low‑code & GenAI automations to slash cycle times and CapEx.",
-      icon: PieChart,
+      title: "Shareholder Alternatives",
+      tagline: "Make capital-structure moves that safeguard value in any market cycle.",
+      description: "",
+      icon: BarChart3,
       iconColor: "text-finance-accent-blue",
       borderColor: "bg-finance-accent-blue",
       bulletColor: "text-finance-accent-blue",
       deliverables: [
-        "Bottom‑up cost curves & savings roadmap",
-        "Automation blueprints (Airtable ↔ Make.com, RPA, LLM agents)",
-        "Before‑and‑after ROI trackers"
-      ]
-    },
-    {
-      title: "Brand Positioning, Thought‑Leadership & Copy",
-      tagline: "Tell Stories that Make AI Human.",
-      description: "Craft messaging—and visuals—that demystify AI and earn stakeholder trust, from taglines to whitepapers to keynotes.",
-      icon: Brain,
-      iconColor: "text-finance-accent-purple",
-      borderColor: "bg-finance-accent-purple",
-      bulletColor: "text-finance-accent-purple",
-      deliverables: [
-        "Brand narrative & messaging architecture",
-        "Investor decks, press releases, and AI explainer visuals",
-        "Ghost‑written op‑eds & conference speeches"
+        "Scenario models",
+        "Pros/cons cheat-sheet",
+        "Board-ready memo"
       ]
     }
   ];
 
   return (
-    <section className="space-y-8">
+    <section className="space-y-8 py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Core Service Portfolio</h2>
-        <div className="w-24 h-1 bg-finance-accent-blue mx-auto"></div>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What We Do</h2>
+        <div className="w-24 h-1 bg-[#0ea5e9] mx-auto"></div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -121,8 +107,8 @@ const ServicesSection: React.FC = () => {
         ))}
       </div>
       
-      <div className="text-center mt-8">
-        <Button variant="outline" className="border-finance-accent-blue text-finance-accent-blue hover:bg-finance-accent-blue/10 hover:text-white">
+      <div className="text-center mt-12">
+        <Button variant="outline" className="border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9]/10 hover:text-white">
           View All Services
         </Button>
       </div>
