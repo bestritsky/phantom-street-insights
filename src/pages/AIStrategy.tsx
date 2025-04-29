@@ -26,7 +26,17 @@ const AIStrategy: React.FC = () => {
       <main className="container mx-auto px-4 py-8 space-y-16">
         {/* Hero Section */}
         <section className="relative chart-container overflow-hidden p-8 md:p-12 mb-8">
-          <div className="absolute inset-0 bg-gradient-to-br from-finance-accent-blue/20 to-finance-accent-purple/10 z-0"></div>
+          <div 
+            className="absolute inset-0 z-0 opacity-20" 
+            style={{
+              backgroundImage: 'url(https://binaryadvisers.com/wp-content/uploads/2025/04/Professional_Mode_Create_a_dynamic_20_second_motio-ezgif.com-optimize.gif)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'blur(2px) brightness(0.7)',
+              mixBlendMode: 'overlay',
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-finance-accent-blue/10 to-finance-accent-purple/5 z-0"></div>
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
               Critical‑Thinking AI Strategy for an Uncertain World
