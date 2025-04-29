@@ -13,7 +13,7 @@ const Products = () => {
       <main className="container mx-auto px-4 py-6 flex-grow">
         <h1 className="text-2xl font-bold mb-6">Products Dashboard</h1>
         
-        <Tabs defaultValue="overview" className="w-full">
+        <Tabs defaultValue="supply" className="w-full">
           <TabsList className="grid grid-cols-3 mb-6 max-w-md">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="cost">Cost Analysis</TabsTrigger>
