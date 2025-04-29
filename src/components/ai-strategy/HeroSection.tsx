@@ -21,8 +21,7 @@ const HeroSection: React.FC = () => {
           Critical‑Thinking AI Strategy for an Uncertain World
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-8">
-          Transform tariff turmoil, supply‑chain fractures, and geopolitical shifts into growth 
-          with pragmatic AI playbooks grounded in rigorous thinking.
+          Shift turmoil into growth with pragmatic AI playbooks grounded in rigorous thinking, research, and automations.
         </p>
         <Button className="bg-finance-accent-blue hover:bg-finance-accent-blue/80 text-white font-semibold py-6 px-8 text-lg">
           Book a Risk & Resilience Call
