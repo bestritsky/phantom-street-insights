@@ -24,7 +24,6 @@ const RiskScore: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 <p className="text-5xl font-bold text-finance-chart-red drop-shadow-md">71</p>
-                <p className="text-muted-foreground text-sm font-medium">Risk Level</p>
               </div>
             </div>
             <ResponsiveContainer width="100%" height="100%">
