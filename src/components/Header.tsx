@@ -30,6 +30,18 @@ const Header: React.FC = () => {
           <ul className="flex items-center space-x-6">
             <li className="hidden md:block">
               <Link 
+                to="/ai-strategy" 
+                className={`text-sm font-medium transition-colors ${
+                  location.pathname === '/ai-strategy' 
+                    ? 'text-finance-accent-blue' 
+                    : 'text-gray-300 hover:text-finance-accent-blue'
+                }`}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="hidden md:block">
+              <Link 
                 to="/dashboards" 
                 className={`text-sm font-medium transition-colors ${
                   location.pathname === '/dashboards' 
@@ -38,18 +50,6 @@ const Header: React.FC = () => {
                 }`}
               >
                 Dashboards
-              </Link>
-            </li>
-            <li className="hidden md:block">
-              <Link 
-                to="/ai-strategy" 
-                className={`text-sm font-medium transition-colors ${
-                  location.pathname === '/ai-strategy' 
-                    ? 'text-finance-accent-blue' 
-                    : 'text-gray-300 hover:text-finance-accent-blue'
-                }`}
-              >
-                AI Strategy
               </Link>
             </li>
             <li className="hidden md:block">
