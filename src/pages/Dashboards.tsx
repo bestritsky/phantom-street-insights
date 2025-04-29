@@ -6,9 +6,6 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BarChart3, ShieldAlert, Package } from 'lucide-react';
 
-// Import the image directly
-import riskDashboardImage from '@/images/risk-dashboard.png';
-
 const Dashboards = () => {
   const navigate = useNavigate();
   
@@ -20,7 +17,6 @@ const Dashboards = () => {
       icon: <BarChart3 className="h-8 w-8 text-finance-accent-blue" />,
       color: 'from-finance-accent-blue/20 to-transparent',
       onClick: () => navigate('/dashboards/market'),
-      thumbnail: null
     },
     {
       id: 'risks',
@@ -29,7 +25,6 @@ const Dashboards = () => {
       icon: <ShieldAlert className="h-8 w-8 text-finance-accent-purple" />,
       color: 'from-finance-accent-purple/20 to-transparent',
       onClick: () => navigate('/dashboards/risks'),
-      thumbnail: riskDashboardImage
     },
     {
       id: 'products',
@@ -38,7 +33,6 @@ const Dashboards = () => {
       icon: <Package className="h-8 w-8 text-finance-accent-orange" />,
       color: 'from-finance-accent-orange/20 to-transparent',
       onClick: () => navigate('/products'),
-      thumbnail: null
     }
   ];
 
@@ -67,26 +61,11 @@ const Dashboards = () => {
                 {dashboard.icon}
               </div>
               
-              {dashboard.thumbnail && (
-                <div className="px-6 pb-4">
-                  <div className="rounded-md overflow-hidden border border-gray-800">
-                    <img 
-                      src={dashboard.thumbnail} 
-                      alt={`${dashboard.title} Preview`}
-                      className="w-full h-auto object-cover"
-                      style={{ maxHeight: "180px" }}
-                    />
-                  </div>
+              <CardContent className="px-6 pb-0">
+                <div className="p-4 flex items-center justify-center border-t border-gray-800/30">
+                  <p className="text-sm text-gray-400">View this dashboard for detailed insights</p>
                 </div>
-              )}
-              
-              {!dashboard.thumbnail && (
-                <div className="px-6 pb-4">
-                  <div className="rounded-md overflow-hidden border border-gray-800 bg-gray-900/50 flex items-center justify-center" style={{ height: "120px" }}>
-                    <p className="text-sm text-gray-500">Dashboard preview</p>
-                  </div>
-                </div>
-              )}
+              </CardContent>
               
               <CardFooter className="border-t border-border/40 p-4">
                 <Button 
