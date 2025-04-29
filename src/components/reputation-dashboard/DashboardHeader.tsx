@@ -7,8 +7,7 @@ const DashboardHeader: React.FC = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold text-white">Risk Dashboard</h2>
-        <p className="text-muted-foreground mt-1">
+        <p className="text-muted-foreground">
           See threats before headlines hit. Updated April 29, 2025
         </p>
       </div>
