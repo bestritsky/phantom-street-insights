@@ -30,14 +30,14 @@ const Header: React.FC = () => {
           <ul className="flex items-center space-x-6">
             <li className="hidden md:block">
               <Link 
-                to="/" 
+                to="/dashboards" 
                 className={`text-sm font-medium transition-colors ${
-                  location.pathname === '/' 
+                  location.pathname === '/dashboards' 
                     ? 'text-finance-accent-blue' 
                     : 'text-gray-300 hover:text-finance-accent-blue'
                 }`}
               >
-                Dashboard
+                Dashboards
               </Link>
             </li>
             <li className="hidden md:block">
