@@ -137,13 +137,13 @@ const ReputationDashboard: React.FC = () => {
         </div>
       </div>
       
-      {/* Reputation Score Overview */}
+      {/* Risk Score Overview (previously Reputation Score) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="hover-glow col-span-1">
           <CardHeader>
             <CardTitle className="flex items-center justify-between">
-              <span>Reputation Score</span>
-              <PieChartIcon className="h-5 w-5 text-finance-accent-blue" />
+              <span>Overall Risk Score</span>
+              <ShieldAlert className="h-5 w-5 text-finance-accent-blue" />
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -151,8 +151,8 @@ const ReputationDashboard: React.FC = () => {
               <div className="relative h-36 w-36">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div>
-                    <p className="text-4xl font-bold">71</p>
-                    <p className="text-muted-foreground text-center text-sm">out of 100</p>
+                    <p className="text-4xl font-bold text-finance-chart-red">71</p>
+                    <p className="text-muted-foreground text-center text-sm">Risk Level</p>
                   </div>
                 </div>
                 <ResponsiveContainer width="100%" height="100%">
@@ -170,28 +170,28 @@ const ReputationDashboard: React.FC = () => {
                       endAngle={-270}
                       dataKey="value"
                     >
-                      <Cell fill="#3b82f6" />
+                      <Cell fill="#ef4444" />
                       <Cell fill="#1e293b" />
                     </Pie>
                   </PieChart>
                 </ResponsiveContainer>
               </div>
               <div className="flex items-center mt-4">
-                <TrendingDown className="h-5 w-5 text-finance-chart-red mr-2" />
-                <span className="text-finance-chart-red font-medium">-5 points this month</span>
+                <TrendingUp className="h-5 w-5 text-finance-chart-red mr-2" />
+                <span className="text-finance-chart-red font-medium">+5 points risk increase</span>
               </div>
               <div className="grid grid-cols-3 w-full mt-6 gap-2">
                 <div className="flex flex-col items-center p-2 bg-secondary/30 rounded-md">
-                  <span className="text-sm text-muted-foreground">Media</span>
-                  <span className="font-medium text-finance-chart-green">76%</span>
+                  <span className="text-sm text-muted-foreground">Market</span>
+                  <span className="font-medium text-finance-chart-red">76%</span>
                 </div>
                 <div className="flex flex-col items-center p-2 bg-secondary/30 rounded-md">
-                  <span className="text-sm text-muted-foreground">Social</span>
-                  <span className="font-medium text-finance-chart-red">65%</span>
+                  <span className="text-sm text-muted-foreground">Operations</span>
+                  <span className="font-medium text-yellow-500">65%</span>
                 </div>
                 <div className="flex flex-col items-center p-2 bg-secondary/30 rounded-md">
-                  <span className="text-sm text-muted-foreground">Industry</span>
-                  <span className="font-medium text-finance-chart-green">82%</span>
+                  <span className="text-sm text-muted-foreground">Regulatory</span>
+                  <span className="font-medium text-finance-chart-green">42%</span>
                 </div>
               </div>
             </div>
@@ -274,8 +274,10 @@ const ReputationDashboard: React.FC = () => {
                   <Progress 
                     value={item.value} 
                     className="h-2" 
-                    style={{ backgroundColor: "#374151" }}
-                    indicatorStyle={{ backgroundColor: item.color }}
+                    style={{ 
+                      backgroundColor: "#374151", 
+                      "--progress-background": item.color 
+                    } as React.CSSProperties}
                   />
                 </div>
               ))}

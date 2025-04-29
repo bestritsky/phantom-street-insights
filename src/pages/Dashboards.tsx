@@ -15,7 +15,7 @@ const Dashboards = () => {
         <Tabs defaultValue="market" className="w-full">
           <TabsList className="grid grid-cols-2 mb-6 max-w-md">
             <TabsTrigger value="market">Market Dashboard</TabsTrigger>
-            <TabsTrigger value="reputation">Strategic Reputation</TabsTrigger>
+            <TabsTrigger value="reputation">Risk & Reputation</TabsTrigger>
           </TabsList>
           <TabsContent value="market" className="mt-0">
             <MarketDashboard />
