@@ -13,8 +13,12 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-finance-accent-blue flex items-center justify-center">
-              <span className="font-bold text-white">B</span>
+            <div className="w-8 h-8 flex items-center justify-center">
+              <img 
+                src="https://binaryadvisers.com/wp-content/uploads/2025/04/new_Ba_Logo_transparent.jpg" 
+                alt="BinaryAdvisers Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
               Binary<span className="text-finance-accent-blue">Advisers</span>
