@@ -8,7 +8,8 @@ import {
   LineChart,
   Shield, 
   BarChart3,
-  Globe
+  Globe,
+  DollarSign
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
@@ -95,6 +96,20 @@ const ServicesSection: React.FC = () => {
         "5-year projection toolkit",
         "Sensitivity analysis matrix",
         "Executive decision dashboard"
+      ]
+    },
+    {
+      title: "Cost Optimization",
+      tagline: "Slash operational expenses through intelligent automation and process optimization.",
+      description: "",
+      icon: DollarSign,
+      iconColor: "text-[#2DD4BF]",
+      borderColor: "bg-[#2DD4BF]",
+      bulletColor: "text-[#2DD4BF]",
+      deliverables: [
+        "Expense reduction roadmap",
+        "Automation opportunity matrix",
+        "90-day cost-cutting plan"
       ]
     }
   ];
