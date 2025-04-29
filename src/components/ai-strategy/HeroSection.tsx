@@ -27,8 +27,7 @@ const HeroSection: React.FC = () => {
           Book a Risk & Resilience Call
         </Button>
         <p className="mt-6 text-gray-400 max-w-2xl mx-auto">
-          From C‑suite workshops to real‑time trade‑flow dashboards, we fuse AI with disciplined 
-          critical‑thinking frameworks, research, and automations—so you stay ahead when borders close, costs spike, or partners pivot.
+          In an era of information abundance, our critical thinking cuts through the noise, allowing us to master focused strategies with measurable business impact. This makes humans like us even more intelligent and more importantly, in control.
         </p>
         
         <div className="mt-12 p-6 bg-black/30 backdrop-blur-sm rounded-lg border border-white/10">
