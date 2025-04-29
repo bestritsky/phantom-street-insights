@@ -9,7 +9,8 @@ import {
   Shield, 
   BarChart3,
   Globe,
-  DollarSign
+  DollarSign,
+  Briefcase
 } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
@@ -110,6 +111,20 @@ const ServicesSection: React.FC = () => {
         "Expense reduction roadmap",
         "Automation opportunity matrix",
         "90-day cost-cutting plan"
+      ]
+    },
+    {
+      title: "Executive Coaching",
+      tagline: "Empower leaders to drive strategic growth and achieve peak performance.",
+      description: "",
+      icon: Briefcase,
+      iconColor: "text-[#9b87f5]",
+      borderColor: "bg-[#9b87f5]",
+      bulletColor: "text-[#9b87f5]",
+      deliverables: [
+        "Leadership development plan",
+        "Performance enhancement strategies",
+        "Strategic decision-making framework"
       ]
     }
   ];
