@@ -11,11 +11,11 @@ const HeroSection: React.FC = () => {
           backgroundImage: 'url(https://binaryadvisers.com/wp-content/uploads/2025/04/Professional_Mode_Create_a_dynamic_20_second_motio-ezgif.com-optimize.gif)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(1.5)',
+          filter: 'brightness(0.8)',
           mixBlendMode: 'normal',
         }}
       ></div>
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      <div className="absolute inset-0 bg-black/80 z-0"></div>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
           Critical‑Thinking AI Strategy for an Uncertain World
