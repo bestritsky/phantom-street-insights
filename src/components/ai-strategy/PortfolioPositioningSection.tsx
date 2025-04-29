@@ -20,7 +20,7 @@ const PortfolioPositioningSection: React.FC = () => {
     },
     {
       title: "Red‑Team Honesty",
-      description: "Each deliverable includes a "What Could Go Wrong?" section with mitigation tactics—your built‑in devil's advocate.",
+      description: 'Each deliverable includes a "What Could Go Wrong?" section with mitigation tactics—your built‑in devil\'s advocate.',
       icon: Shield,
       iconColor: "text-finance-accent-purple"
     },
