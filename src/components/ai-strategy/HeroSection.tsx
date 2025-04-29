@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative chart-container overflow-hidden p-8 md:p-12 mb-8">
       <div 
-        className="absolute inset-0 z-0 opacity-40" 
+        className="absolute inset-0 z-0" 
         style={{
           backgroundImage: 'url(https://binaryadvisers.com/wp-content/uploads/2025/04/Professional_Mode_Create_a_dynamic_20_second_motio-ezgif.com-optimize.gif)',
           backgroundSize: 'cover',
@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
           mixBlendMode: 'normal',
         }}
       ></div>
-      <div className="absolute inset-0 bg-black z-0"></div>
+      <div className="absolute inset-0 bg-black/70 z-0"></div>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
           Critical‑Thinking AI Strategy for an Uncertain World
