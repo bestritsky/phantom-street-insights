@@ -6,6 +6,9 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BarChart3, ShieldAlert, Package } from 'lucide-react';
 
+// Import the image directly
+import riskDashboardImage from '../images/risk-dashboard.png';
+
 const Dashboards = () => {
   const navigate = useNavigate();
   
@@ -26,7 +29,7 @@ const Dashboards = () => {
       icon: <ShieldAlert className="h-8 w-8 text-finance-accent-purple" />,
       color: 'from-finance-accent-purple/20 to-transparent',
       onClick: () => navigate('/dashboards/risks'),
-      thumbnail: 'lovable-uploads/938848c7-664b-4fe5-89db-bbbca1768605.png'
+      thumbnail: riskDashboardImage
     },
     {
       id: 'products',
@@ -68,7 +71,7 @@ const Dashboards = () => {
                 <div className="px-6 pb-4">
                   <div className="rounded-md overflow-hidden border border-gray-800">
                     <img 
-                      src={`/${dashboard.thumbnail}`} 
+                      src={dashboard.thumbnail} 
                       alt={`${dashboard.title} Preview`}
                       className="w-full h-auto object-cover"
                       style={{ maxHeight: "180px" }}
