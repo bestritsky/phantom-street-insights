@@ -1,7 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -55,14 +53,6 @@ const Header: React.FC = () => {
               <a href="#" className="text-sm font-medium text-gray-300 hover:text-finance-accent-blue transition-colors">
                 Research
               </a>
-            </li>
-            <li>
-              <Button variant="outline" size="sm" className="hidden md:flex">
-                <Search className="h-4 w-4 mr-2" /> Advanced Search
-              </Button>
-              <Button variant="outline" size="sm" className="md:hidden">
-                <Search className="h-4 w-4" />
-              </Button>
             </li>
           </ul>
         </nav>
