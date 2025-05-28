@@ -2,7 +2,6 @@
 import React from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/ai-strategy/HeroSection';
-import ServicesSection from '@/components/ai-strategy/ServicesSection';
 import ExecutiveEnablementSection from '@/components/ai-strategy/ExecutiveEnablementSection';
 import PortfolioPositioningSection from '@/components/ai-strategy/PortfolioPositioningSection';
 import EngagementSection from '@/components/ai-strategy/EngagementSection';
@@ -14,7 +13,6 @@ const AIStrategy: React.FC = () => {
       <Header />
       <main className="container mx-auto px-4 py-8 space-y-16">
         <HeroSection />
-        <ServicesSection />
         <ExecutiveEnablementSection />
         <PortfolioPositioningSection />
         <EngagementSection />
