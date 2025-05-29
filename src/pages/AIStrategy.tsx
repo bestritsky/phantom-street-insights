@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/ai-strategy/HeroSection';
+import ExpandableBusinessResults from '@/components/ai-strategy/ExpandableBusinessResults';
 import Footer from '@/components/ai-strategy/Footer';
 
 const AIStrategy: React.FC = () => {
@@ -10,6 +11,7 @@ const AIStrategy: React.FC = () => {
       <Header />
       <main className="container mx-auto px-4 py-8 space-y-16">
         <HeroSection />
+        <ExpandableBusinessResults />
       </main>
       <Footer />
     </div>
